@@ -116,13 +116,10 @@ nav.controls{
         border-radius: 10px;
         display: flex;
         flex-direction: column;
-
-        h2, p {
-            margin-top: 25px;
-            margin-left: 35px;
-        } 
-
+        padding: 30px;
+        
         h2 {
+            margin-left: 35px;
             font-size: 2rem;
             font-weight: bold;
             color: #03A9F4;
@@ -131,7 +128,7 @@ nav.controls{
 
         p {
             font-size: 1.3rem;
-            margin-right: 25px;
+            margin: 25px;
         }
 
         ul {
