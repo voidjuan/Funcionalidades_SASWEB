@@ -50,7 +50,7 @@ nav.controls{
             max-width: 50%;
 
             h1 {
-                font-size: 3.5rem;
+                font-size: 3.4rem;
                 font-weight: 400;
                 font-family: sans-serif;
                 text-align: center;
@@ -116,19 +116,20 @@ nav.controls{
         border-radius: 10px;
         display: flex;
         flex-direction: column;
-        padding: 40px;
+        padding: 20px 20px;
         
         h2 {
-            margin-left: 35px;
             font-size: 2rem;
             font-weight: bold;
             color: #03A9F4;
             margin-bottom: 0;
+            text-align: center;
         }
 
         p {
             font-size: 1.3rem;
             margin: 25px;
+            text-align: justify;
         }
 
         ul {
@@ -136,8 +137,9 @@ nav.controls{
         }
 
         img {
-            margin: 0px auto;
-            width: 100%;
+            margin: 2px auto;
+            width: 95%;
+            border-radius: 10px;
         }
     }
 }
