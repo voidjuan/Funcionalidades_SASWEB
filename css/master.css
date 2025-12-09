@@ -119,7 +119,7 @@ nav.controls{
         padding: 20px 20px;
         
         h2 {
-            font-size: 2rem;
+            font-size: 2.15rem;
             font-weight: bold;
             color: #03A9F4;
             margin-bottom: 0;
@@ -131,15 +131,25 @@ nav.controls{
             margin: 25px;
             text-align: justify;
         }
-
+        
         ul {
-            margin: 0px 25px;
+            text-align: justify;
+            font-size: 1.3rem;
+            display: flex;
+            flex-direction: column;
+            margin: 0px 25px 25px 25px;
+            gap: 1rem;
         }
 
         img {
             margin: 2px auto;
             width: 95%;
             border-radius: 10px;
+        }
+
+        img:is(:hover) {
+            transform: scale(1.02);
+            box-shadow: #000 0px 1px 10px;
         }
     }
 }
