@@ -112,7 +112,7 @@ nav.controls{
         margin: 0 auto;
         width: 80%;
         height: auto;
-        min-height: 30rem;
+        min-height: 10rem;
         border-radius: 10px;
         display: flex;
         flex-direction: column;

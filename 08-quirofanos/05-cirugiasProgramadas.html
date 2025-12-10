@@ -20,15 +20,24 @@
                 
                 <div class="contenido">
                     <h2>Cirugias Programadas</h2>
-                    <p>El módulo <strong>Cirugias Programadas</strong> permite gestionar y visualizar el estado del material de osteosíntesis asociado a las cirugías programadas. La vista del módulo se divide en dos secciones principales que pueden alternarse mediante un <strong>checkbox:</strong></p>
+                    <p>El módulo <strong>Cirugias Programadas</strong> permite visualizar y gestionar el listado de procedimientos quirúrgicos programados dentro del sistema. Al ingresar, se presenta una tabla con información detallada de cada cirugía, incluyendo número de radicado, fecha del procedimiento, sala asignada, especialidad, horarios de inicio y fin, datos del paciente, tipo de aseguramiento, procedimiento, cirujano, anestesiólogo y observaciones relevantes. Mediante un selector ubicado en la parte superior, el usuario puede alternar entre dos vistas principales: <strong>Programadas y Realizadas.</strong></p>
                     <ul>
-                        <li><strong>Pendiente Material: </strong>donde se listan todas las cirugías que aún requieren validar o confirmar el material necesario.</li>
-                        <li><strong>Ok: </strong>donde se muestran los casos en los que el material ya fue verificado o aprobado.</li>
+                        <li><strong>Programadas: </strong>muestra las cirugías pendientes por ejecutar.</li>
+                        <img src="../images/cirugiasProgramadas.png">
+
+                        <li><strong>Realizadas: </strong>permite visualizar el historial de cirugías ya efectuadas.</li>
+                        <img src="../images/cirugiasProgramadas2.png">
                     </ul>
-                    <img src="../images/materialOsteosintesis.png">
-                    <p>En ambas vistas se despliega una tabla detallada que incluye información relevante como número de radicado, documento del paciente, nombre, procedimiento quirúrgico, especialista, fecha de cirugía, sede y sala asignada, además del campo de <strong>Material</strong> y un espacio para <strong>observaciones</strong>. En el caso de los registros pendientes, cada fila cuenta con un botón "<strong>Ok</strong>" que permite marcar manualmente que el material ha sido confirmado o gestionado.</p>
-                    <img src="../images/materialOsteosintesis2.png">
-                    <p>Este módulo proporciona una herramienta clara y centralizada para realizar el control del material quirúrgico especializado, facilitando la coordinación entre cirugía, central de suministros y logística, y asegurando que cada procedimiento cuente con los elementos necesarios antes de su realización.</p>
+                    <p>En la parte superior derecha de la vista "<strong>Programadas</strong>" se encuentra el botón “<strong>Asignar canastilla anestesia</strong>”, que permite completar la preparación del material requerido para cada procedimiento quirúrgico. Al seleccionarlo, el sistema dirige al usuario a un formulario donde podrá registrar la sala y la fecha de la cirugía, y posteriormente visualizar la canastilla predeterminada asociada al procedimiento.</p>
+                    <img src="../images/cirugiasProgramadas3.png">
+                    <p>Desde esta vista es posible:</p>
+                    <ul>
+                        <li>Consultar los medicamentos e insumos incluidos en la canastilla.</li>
+                        <li>Ajustar cantidades según las necesidades de la cirugía.</li>
+                        <li>Agregar insumos adicionales.</li>
+                        <li>Eliminar elementos no requeridos.</li>
+                    </ul>
+                    <p>Este proceso garantiza que el área de anestesia cuente con una canastilla adecuada y personalizada para cada intervención, facilitando la preparación previa al acto quirúrgico. El módulo, en conjunto, ofrece una herramienta completa para el seguimiento, verificación y preparación del material necesario, permitiendo una gestión más precisa y organizada del flujo de cirugías del servicio.</p>
                 </div>
             </main>
         </body>
