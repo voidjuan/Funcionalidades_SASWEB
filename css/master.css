@@ -21,8 +21,10 @@ nav.controls{
         opacity: 0.6;
         padding: 13px;
         width: 40px;
-        transition: all 0.4s ease-in;
-        
+        transition: all 0.3s ease-in;
+    }
+    a:is(:hover){
+        background-color: #03A9F4;
     }
 }
 
@@ -139,6 +141,11 @@ nav.controls{
             flex-direction: column;
             margin: 0px 25px 25px 25px;
             gap: 1rem;
+            transition: all 0.2 ease-in;
+
+            li:is(:hover) {
+                color: #03A9F4;
+            }
         }
 
         img {
