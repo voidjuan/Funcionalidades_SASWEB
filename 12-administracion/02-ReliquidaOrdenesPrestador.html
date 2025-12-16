@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reliquidar Ordenes Prestador</title>
+    <link rel="stylesheet" href="../css/master.css">
+</head>
+        <body>
+            <nav class="controls">
+                <a href="index.html" style="background-image: url('../images/flecha-pequena-izquierda.png');"></a>
+            </nav>
+            <main>
+                <header>
+                    <div class="caja-confa">
+                        <h1>Modulos Sas-Web</h1>
+                        <h1>Funcionalidades</h1>
+                    </div>
+                </header>
+                
+                <div class="contenido">
+                    <h2>Reliquidar Ordenes Prestador</h2>
+                    <p>El módulo <strong>Reliquidar Ordenes Prestador</strong> permite gestionar el proceso de reliquidación asociado al cambio de prestador en una orden específica. Al ingresar al módulo, se presenta un campo donde el usuario debe digitar el número de orden que desea revisar. Una vez ingresado el consecutivo, el sistema carga automáticamente la información relacionada, mostrando una tabla con los datos básicos de la orden, como usuario, fecha, tipo, número de orden y observaciones.</p>
+                    <img src="../images/reliquidarOrdenesPrestador.png">
+                    <p>Desde esta vista inicial, se habilita el botón <strong>Cambiar Prestador</strong>, el cual al ser presionado muestra una segunda tabla en la que aparece el prestador actual asociado a la orden y un selector que permite elegir el nuevo prestador al cual se desea trasladar la responsabilidad del servicio.</p>
+                    <img src="../images/reliquidarOrdenesPrestador2.png">
+                    <p>Después de seleccionar el nuevo prestador, el sistema habilita el botón <strong>Ingresar a Reliquidar</strong>, que al ser ejecutado envía la orden a un panel inferior donde se visualiza la preliquidación. En esta tabla se presenta un resumen del movimiento, incluyendo la secuencia generada, el usuario que ejecuta la operación, la fecha, el número de orden, el prestador anterior, el prestador nuevo y los indicadores que señalan si la reliquidación aplicará cambios.</p>
+                    <img src="../images/reliquidarOrdenesPrestador3.png">
+                    <p>Una vez verificada la información, el usuario puede finalizar el proceso mediante el botón <strong>Reliquidar</strong>, con lo cual el sistema ejecuta la actualización, genera el número oficial de reliquidación y muestra un mensaje confirmando que la operación fue realizada exitosamente.</p>
+                    <img src="../images/reliquidarOrdenesPrestador4.png">
+                    <p>Este módulo replica la lógica operativa del proceso de reliquidación por convenio, pero enfocado específicamente en la actualización del prestador asignado a una orden. Su diseño permite realizar cambios controlados, asegurar la trazabilidad de cada modificación y garantizar que las órdenes migren correctamente entre prestadores según los requerimientos administrativos o asistenciales.</p>
+                </div>
+            </main>
+        </body>
+</html>
