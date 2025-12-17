@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Consultar RIPS</title>
+    <link rel="stylesheet" href="../css/master.css">
+</head>
+        <body>
+            <nav class="controls">
+                <a href="index.html" style="background-image: url('../images/flecha-pequena-izquierda.png');"></a>
+            </nav>
+            <main>
+                <header>
+                    <div class="caja-confa">
+                        <h1>Modulos Sas-Web</h1>
+                        <h1>Funcionalidades</h1>
+                    </div>
+                </header>
+                
+                <div class="contenido">
+                    <h2>Consultar RIPS</h2>
+                    <p>El módulo <strong>Consultar RIPS</strong> está diseñado para facilitar la búsqueda, validación y descarga de la información asociada a los RIPS generados en el sistema. Al ingresar a esta vista, el usuario encuentra un conjunto de filtros que permiten delimitar la consulta según la necesidad: por <strong>número de factura</strong>, por <strong>convenio</strong>, o por un rango específico de <strong>fechas de generación</strong>. Una vez ingresados los datos en el campo correspondiente y ejecutada la búsqueda, el sistema retorna todos los registros que coincidan con los criterios seleccionados.</p>
+                    <img src="../images/consultarRips.png">
+                    <img src="../images/consultarRips2.png">
+                    <p>Cada registro mostrado incluye información relevante como número de factura, valor, convenio asociado, fecha de generación y el código CUV. Además, cada fila incorpora varias acciones disponibles para gestión documental y operativa. El botón <strong>Consultar Órdenes</strong> abre un modal detallado que muestra todas las órdenes vinculadas a la factura seleccionada, incluyendo identificación del paciente, plan, valores y descripción de los códigos facturados. Por otro lado, los botones <strong>Descargar JSON</strong>, <strong>Descargar XML</strong>, <strong>Descargar SURA</strong> y <strong>Ver CUV JSON</strong> permiten obtener cada uno de los archivos de soporte en su formato correspondiente.</p>
+                    <img src="../images/consultarRips3.png">
+                    <p>Asimismo, el módulo incluye la opción <strong>Exportar JSON masivo</strong>, la cual se habilita cuando el usuario selecciona uno o más registros mediante la casilla de verificación. Al ejecutarse, el sistema genera y descarga automáticamente un archivo comprimido que contiene todos los soportes JSON asociados a los registros seleccionados, facilitando así la gestión masiva de documentación RIPS. Esta funcionalidad resulta especialmente útil para auditorías, procesos de envío a aseguradoras o para respaldo interno de información.</p>
+                    <img src="../images/consultarRips4.png">
+                </div>
+            </main>
+        </body>
+</html>
