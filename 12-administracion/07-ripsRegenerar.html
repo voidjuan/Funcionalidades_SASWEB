@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Regenerar RIPS</title>
+    <link rel="stylesheet" href="../css/master.css">
+</head>
+        <body>
+            <nav class="controls">
+                <a href="index.html" style="background-image: url('../images/flecha-pequena-izquierda.png');"></a>
+            </nav>
+            <main>
+                <header>
+                    <div class="caja-confa">
+                        <h1>Modulos Sas-Web</h1>
+                        <h1>Funcionalidades</h1>
+                    </div>
+                </header>
+                
+                <div class="contenido">
+                    <h2>Regenerar RIPS</h2>
+                    <p>El módulo <strong>Regenerar RIPS</strong>permite gestionar de manera centralizada todas las facturas cuyo proceso de generación de archivos RIPS en formato JSON ha sido rechazado por inconsistencias, errores estructurales o fallas en la validación exigida por las normas vigentes. Al acceder al módulo, el sistema presenta una vista inicial en la que se habilita un botón para <strong>consultar facturas rechazadas</strong>. Una vez accionado, la plataforma ejecuta la búsqueda e identifica todas las facturas que no superaron el proceso de validación, desplegándolas en una tabla de resultados.</p>
+                    <img src="../images/regenerarRips.png">
+                    <p>Cada registro de la tabla corresponde a una factura específica e incluye información relevante para su análisis, como el <strong>número de factura</strong>, el <strong>convenio asociado</strong>, la <strong>fecha de generación</strong>, el <strong>estado de generación</strong> y la <strong>descripción del error</strong>, donde se detallan las causas técnicas que impidieron la correcta creación del archivo RIPS. Con esta información, el usuario puede identificar fácilmente si los errores corresponden a fallas en estructura, datos faltantes, formatos incorrectos, periodos inconsistentes u otras condiciones que deben ser ajustadas antes de proceder a una nueva generación.</p>
+                    <img src="../images/regenerarRips2.png">
+                    <p>Adicionalmente, cada fila cuenta con dos acciones clave. El botón "<strong>Descripción Error</strong>" abre un modal en el que se amplía el detalle del error reportado, lo que facilita su interpretación y permite orientar las correcciones pertinentes. El botón "<strong>Consultar Ordenes</strong>" habilita un segundo modal donde se listan todas las órdenes asociadas a la factura seleccionada. En este modal se presenta información clínica y administrativa del paciente, como identificación, nombre, código de procedimiento, valores cobrados y demás datos vinculados a la prestación de servicios registrada en la factura, lo que permite validar si las inconsistencias se originan en alguno de esos registros.</p>
+                    <img src="../images/regenerarRips4.png">
+                    <img src="../images/regenerarRips3.png">
+                    <p>Cuando el usuario haya identificado y corregido los errores asociados a las facturas, podrá utilizar el botón "<strong>Re-Generar RIPS</strong>", el cual toma todas las facturas seleccionadas y ejecuta nuevamente la creación del archivo JSON conforme a los estándares exigidos. Este proceso habilita la posibilidad de que facturas previamente rechazadas sean aceptadas tras la corrección de sus datos.<br>En conjunto, este módulo constituye una herramienta esencial de auditoría y control operativo, ya que facilita la revisión detallada de las facturas rechazadas, permite acceder a la información subyacente para la identificación precisa de errores y habilita un mecanismo eficiente para reintentar la generación del archivo RIPS sin necesidad de repetir procesos manuales ni reconstruir la factura desde su origen.</p>
+                </div>
+            </main>
+        </body>
+</html>
