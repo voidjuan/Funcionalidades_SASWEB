@@ -20,7 +20,13 @@
                 
                 <div class="contenido">
                     <h2>Dividir PDF</h2>
-                    <p>El módulo <strong>Dividir PDF</strong>.</p>
+                    <p>El módulo <strong>Dividir PDF</strong> permite procesar documentos PDF que contienen múltiples registros asociados a diferentes pacientes, dividiéndolos automáticamente según la cédula correspondiente. Su estructura está diseñada para guiar al usuario paso a paso, desde la búsqueda del registro hasta la carga y procesamiento del archivo. <br><br>Al ingresar al módulo, se presenta un cuadro de <strong>parámetros de búsqueda</strong>, en el cual el usuario debe seleccionar si trabajará sobre una <strong>Admisión</strong> o una <strong>Factura</strong>. Una vez elegida la opción, se habilita el campo de texto donde debe ingresarse el número de admisión o factura que se desea consultar. Al hacer clic en <strong>Buscar</strong>, el sistema valida la información y muestra la cantidad de cédulas encontradas asociadas a ese registro.</p>
+                    <img src="../images/dividirPdf.png">
+                    <p>Cuando la búsqueda es exitosa, se habilita la sección <strong>Subir y procesar PDF</strong>, donde se muestra el botón <strong>Seleccionar PDF</strong>. Al oprimirlo, se abre el explorador de archivos del equipo para que el usuario pueda elegir el documento PDF que desea dividir. Una vez cargado el archivo, este se muestra en pantalla como un archivo listo para procesar.</p>
+                    <img src="../images/dividirPdf2.png">
+                    <p>Con el archivo cargado, se activa el botón <strong>Procesar y descargar ZIP</strong>, que ejecuta la división del documento. El sistema extrae cada parte del PDF correspondiente a una cédula identificada en la búsqueda inicial y genera un archivo comprimido (.zip) que contiene todos los fragmentos del documento ya separados. El nombre del archivo descargado incluye automáticamente una parte del nombre del PDF original, facilitando su identificación.</p>
+                    <img src="../images/dividirPdf3.png">
+                    <p>Este módulo optimiza el manejo documental al automatizar un proceso que antes debía hacerse manualmente, garantizando precisión y reduciendo tiempos en la gestión de soportes clínicos o administrativos.</p>
                 </div>
             </main>
         </body>
