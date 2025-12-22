@@ -1,166 +1,395 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
 body {
     background-color: #bbaa99;
     background-image: url("https://sasweb.confa.co:8322/saludSasWebHC/jakarta.faces.resource/images/login/salud.jpg.xhtml?ln=ultima-layout");   
     background-attachment: fixed;
     background-size: cover;
     background-position: center;
-    font-family: poppins, sans-serif;
-
+    font-family: 'Poppins', sans-serif;
+    position: relative;
+    min-height: 100vh;
 }
 
-nav.controls{
-    a:is(:link, :visited){
-        border-radius: 50px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        background-color: #000;
-        height: 40px;
-        transform: scale(0.8);
-        opacity: 0.6;
-        padding: 13px;
-        width: 40px;
-        transition: all 0.3s ease-in;
-    }
-    a:is(:hover){
-        background-color: #03A9F4;
-    }
+/* Overlay sutil para mejor legibilidad */
+body::before {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.15);
+    pointer-events: none;
+    z-index: 0;
 }
 
- main {
+/* Controles de navegación */
+nav.controls {
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    z-index: 1000;
+}
+
+nav.controls a:is(:link, :visited) {
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(0, 0, 0, 0.7);
+    backdrop-filter: blur(10px);
+    background-position: center;
+    height: 50px;
+    width: 50px;
+    padding: 0;
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+    border: 2px solid rgba(255, 255, 255, 0.1);
+}
+
+nav.controls a:hover {
+    transform: scale(1.1) translateY(-2px);
+    box-shadow: 0 8px 25px rgba(3, 169, 244, 0.4);
+    border-color: rgba(255, 255, 255, 0.2);
+}
+
+/* Main container */
+main {
+    position: relative;
+    z-index: 1;
     align-items: center;
     display: flex;
     flex-direction: column;
-    gap: .6rem;
+    gap: 2rem;
     min-height: 100vh;
+    padding: 2rem 1rem;
+}
 
-    header {
-        padding: 10px;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-
-         .caja-confa{
-            background-color: #fff;
-            background-image: url("../../images/arquitectura_marca.jpg");
-            padding: 30px;
-            background-repeat: no-repeat;
-            background-size: 100%;
-            border-radius: 10px;
-            min-width: 505px;
-            max-width: 50%;
-
-            h1 {
-                font-size: 3.4rem;
-                font-weight: 400;
-                font-family: sans-serif;
-                text-align: center;
-                margin: 0;
-                color: #03A9F4;
-            }
-        }
-        
-
-    }
-
-    menu {
+/* Header */
+header {
+    padding: 1rem;
     display: flex;
     flex-direction: column;
+    align-items: center;
     gap: 1rem;
+    animation: fadeInDown 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+}
 
-    a:is(:link, :visited) {
-        background-color: #0009;
-        border-radius: 50px;
-        display: flex;
-        color:#fffd;
-        gap: 1rem;
-        align-items: center;
-        padding: 1rem;
-        text-decoration: none;
-        transition: all 0.3s ease-in;
-        width: 280px;
-
-        i {
-            background-color: rgb(255, 255, 255);
-            border-radius: 20px;
-            color: rgb(0, 0, 0);
-            font-style: normal;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            height: 34px;
-            width: 34PX;
-        }
+@keyframes fadeInDown {
+    from {
+        opacity: 0;
+        transform: translateY(-30px);
     }
-
-    a:is(:hover) {
-        transform: translate(-10px);
-        background-color: rgb(0, 183, 255);
-    }
-
-    a:is(:hover) i {
-        transform: scale(1.4);
-    }
-
-    a.disabled{
-        opacity: 0.4;
-        cursor: not-allowed;
+    to {
+        opacity: 1;
+        transform: translateY(0);
     }
 }
 
+.caja-confa {
+    background: rgba(255, 255, 255, 0.95);
+    background-image: url("../../images/arquitectura_marca.jpg");
+    padding: 2.5rem;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: top;
+    border-radius: 20px;
+    min-width: 320px;
+    max-width: 600px;
+    width: 100%;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+    backdrop-filter: blur(10px);
+    border: 2px solid rgba(255, 255, 255, 0.3);
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.caja-confa:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 25px 70px rgba(0, 0, 0, 0.4);
+}
+
+.caja-confa h1 {
+    font-size: clamp(2rem, 5vw, 3.4rem);
+    font-weight: 600;
+    font-family: 'Poppins', sans-serif;
+    text-align: center;
+    margin: 0.3rem 0;
+    color: #03A9F4;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+h3 {
+    border-radius: 25px;
+    background: rgba(0, 0, 0, 0.7);
+    backdrop-filter: blur(10px);
+    color: #03A9F4;
+    padding: 0.8rem 2rem;
+    font-size: 1.1rem;
+    font-weight: 500;
+    margin-top: 1rem;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    animation: fadeIn 1s ease-in;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+/* Menu */
+menu {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    animation: fadeInUp 0.8s cubic-bezier(0.4, 0, 0.2, 1) 0.2s backwards;
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+menu a:is(:link, :visited) {
+    background: rgba(0, 0, 0, 0.7);
+    backdrop-filter: blur(10px);
+    border-radius: 50px;
+    display: flex;
+    color: rgba(255, 255, 255, 0.95);
+    gap: 1.2rem;
+    align-items: center;
+    padding: 1.2rem 1.5rem;
+    text-decoration: none;
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    width: 320px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+    border: 2px solid rgba(255, 255, 255, 0.1);
+    font-weight: 500;
+    position: relative;
+    overflow: hidden;
+}
+
+menu a::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.1), transparent);
+    transition: left 0.5s;
+}
+
+menu a:hover::before {
+    left: 100%;
+}
+
+menu a i {
+    background: linear-gradient(135deg, #03A9F4, #0288D1);
+    border-radius: 50%;
+    color: #fff;
+    font-style: normal;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 40px;
+    width: 40px;
+    font-weight: 600;
+    box-shadow: 0 4px 10px rgba(3, 169, 244, 0.3);
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+menu a:hover {
+    transform: translateX(-10px);
+    background: linear-gradient(135deg, rgba(3, 169, 244, 0.9), rgba(2, 136, 209, 0.9));
+    box-shadow: 0 8px 25px rgba(3, 169, 244, 0.4);
+    border-color: rgba(255, 255, 255, 0.3);
+}
+
+menu a:hover i {
+    transform: scale(1.2) rotate(5deg);
+    box-shadow: 0 6px 15px rgba(255, 255, 255, 0.4);
+}
+
+menu a.disabled {
+    opacity: 0.4;
+    cursor: not-allowed;
+    pointer-events: none;
+}
+
+/* Contenido */
 .contenido {
-        background-color: #fff;
-        margin: 0 auto 20px;
-        width: 80%;
-        height: auto;
-        min-height: 10rem;
-        border-radius: 10px;
-        display: flex;
-        flex-direction: column;
-        padding: 20px 20px;
-        
-        h2 {
-            font-size: 2.15rem;
-            font-weight: bold;
-            color: #03A9F4;
-            margin-bottom: 0;
-            text-align: center;
-        }
+    background: rgba(255, 255, 255, 0.98);
+    backdrop-filter: blur(10px);
+    margin: 0 auto 2rem;
+    width: 90%;
+    max-width: 1200px;
+    height: auto;
+    min-height: 10rem;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    padding: 2.5rem;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+    border: 2px solid rgba(255, 255, 255, 0.3);
+    animation: fadeInScale 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+}
 
-        strong:is(:hover) {
-                color: #03A9F4;
-            }
+@keyframes fadeInScale {
+    from {
+        opacity: 0;
+        transform: scale(0.95);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
 
-        p {
-            font-size: 1.3rem;
-            margin: 25px;
-            text-align: justify;
-        }
-        
-        ul {
-            text-align: justify;
-            font-size: 1.3rem;
-            display: flex;
-            flex-direction: column;
-            margin: 0px 25px 25px 25px;
-            gap: 1rem;
-            transition: all 0.2 ease-in;
+.contenido h2 {
+    font-size: clamp(1.8rem, 4vw, 2.5rem);
+    font-weight: 700;
+    color: #03A9F4;
+    margin-bottom: 1.5rem;
+    text-align: center;
+    position: relative;
+    padding-bottom: 1rem;
+}
 
-            li:is(:hover) {
-                color: #03A9F4;
-            }
-        }
+.contenido h2::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80px;
+    height: 4px;
+    background: linear-gradient(90deg, transparent, #03A9F4, transparent);
+    border-radius: 2px;
+}
 
-        img {
-            margin: 2px auto;
-            width: 95%;
-            border-radius: 10px;
-        }
+.contenido strong {
+    color: #0288D1;
+    font-weight: 600;
+    transition: color 0.3s ease;
+    cursor: pointer;
+}
 
-        img:is(:hover) {
-            transform: scale(1.02);
-            box-shadow: #000 0px 1px 10px;
-        }
+.contenido strong:hover {
+    color: #03A9F4;
+}
+
+.contenido p {
+    font-size: 1.15rem;
+    line-height: 1.8;
+    margin: 1.5rem 0;
+    text-align: justify;
+    color: #333;
+}
+
+.contenido ul {
+    text-align: justify;
+    font-size: 1.15rem;
+    line-height: 1.8;
+    display: flex;
+    flex-direction: column;
+    margin: 1rem 0 1.5rem 2rem;
+    gap: 1rem;
+    color: #333;
+}
+
+.contenido ul li {
+    position: relative;
+    padding-left: 1.5rem;
+    transition: all 0.3s ease;
+}
+
+.contenido ul li::before {
+    content: '▸';
+    position: absolute;
+    left: 0;
+    color: #03A9F4;
+    font-weight: bold;
+}
+
+.contenido ul li:hover {
+    color: #03A9F4;
+    transform: translateX(5px);
+}
+
+.contenido img {
+    margin: 2rem auto;
+    width: 95%;
+    max-width: 100%;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    border: 3px solid rgba(3, 169, 244, 0.2);
+}
+
+.contenido img:hover {
+    transform: scale(1.02) translateY(-5px);
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.3);
+    border-color: rgba(3, 169, 244, 0.5);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    main {
+        padding: 1rem 0.5rem;
+        gap: 1.5rem;
+    }
+    
+    .caja-confa {
+        padding: 1.5rem;
+        min-width: 280px;
+    }
+    
+    menu a:is(:link, :visited) {
+        width: 280px;
+        padding: 1rem 1.2rem;
+    }
+    
+    .contenido {
+        width: 95%;
+        padding: 1.5rem;
+    }
+    
+    .contenido p,
+    .contenido ul {
+        font-size: 1rem;
+    }
+    
+    nav.controls {
+        top: 10px;
+        left: 10px;
+    }
+}
+
+@media (max-width: 480px) {
+    menu a:is(:link, :visited) {
+        width: 260px;
+        gap: 1rem;
+    }
+    
+    menu a i {
+        height: 35px;
+        width: 35px;
     }
 }
