@@ -11,6 +11,15 @@ var numero = 0
 
 while (numero < 100) {
     numero = numero + 1
+    if (numero % 3) {
+        console.log("FIZZ")
+    } 
+    if (numero % 5) {
+        console.log("BUZZ")
+    }
+    if (numero % 3 && numero % 5) {
+        console.log("FIZZBUZZ")
+    }
     console.log(numero)
 }
 
