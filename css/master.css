@@ -17,7 +17,8 @@ body {
     min-height: 100vh;
 }
 
-/* Overlay sutil para mejor legibilidad */
+
+
 body::before {
     content: '';
     position: fixed;
@@ -30,13 +31,14 @@ body::before {
     z-index: 0;
 }
 
-/* Controles de navegación */
+
 nav.controls {
     position: fixed;
     top: 20px;
     left: 20px;
     z-index: 1000;
 }
+
 
 nav.controls a:is(:link, :visited) {
     border-radius: 50%;
@@ -54,13 +56,14 @@ nav.controls a:is(:link, :visited) {
     border: 2px solid rgba(255, 255, 255, 0.1);
 }
 
+
 nav.controls a:hover {
     transform: scale(1.1) translateY(-2px);
     box-shadow: 0 8px 25px rgba(3, 169, 244, 0.4);
     border-color: rgba(255, 255, 255, 0.2);
 }
 
-/* Main container */
+
 main {
     position: relative;
     z-index: 1;
@@ -72,7 +75,7 @@ main {
     padding: 2rem 1rem;
 }
 
-/* Header */
+
 header {
     padding: 1rem;
     display: flex;
@@ -81,6 +84,7 @@ header {
     gap: 1rem;
     animation: fadeInDown 0.8s cubic-bezier(0.4, 0, 0.2, 1);
 }
+
 
 @keyframes fadeInDown {
     from {
@@ -93,12 +97,13 @@ header {
     }
 }
 
+
 .caja-confa {
     background: rgba(255, 255, 255, 0.95);
     background-image: url("../../images/arquitectura_marca.jpg");
     padding: 2.5rem;
     background-repeat: no-repeat;
-    background-size: contain;
+    background-size: auto 27px;
     background-position: top;
     border-radius: 20px;
     min-width: 320px;
@@ -106,14 +111,15 @@ header {
     width: 100%;
     box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
     backdrop-filter: blur(10px);
-    border: 2px solid rgba(255, 255, 255, 0.3);
     transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
 }
+
 
 .caja-confa:hover {
     transform: translateY(-5px);
     box-shadow: 0 25px 70px rgba(0, 0, 0, 0.4);
 }
+
 
 .caja-confa h1 {
     font-size: clamp(2rem, 5vw, 3.4rem);
@@ -124,6 +130,7 @@ header {
     color: #03A9F4;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
 }
+
 
 h3 {
     border-radius: 25px;
@@ -139,12 +146,13 @@ h3 {
     animation: fadeIn 1s ease-in;
 }
 
+
 @keyframes fadeIn {
     from { opacity: 0; }
     to { opacity: 1; }
 }
 
-/* Menu */
+
 menu {
     display: flex;
     flex-direction: column;
@@ -154,6 +162,7 @@ menu {
     list-style: none;
     animation: fadeInUp 0.8s cubic-bezier(0.4, 0, 0.2, 1) 0.2s backwards;
 }
+
 
 @keyframes fadeInUp {
     from {
@@ -165,6 +174,7 @@ menu {
         transform: translateY(0);
     }
 }
+
 
 menu a:is(:link, :visited) {
     background: rgba(0, 0, 0, 0.7);
@@ -185,6 +195,7 @@ menu a:is(:link, :visited) {
     overflow: hidden;
 }
 
+
 menu a::before {
     content: '';
     position: absolute;
@@ -196,9 +207,11 @@ menu a::before {
     transition: left 0.5s;
 }
 
+
 menu a:hover::before {
     left: 100%;
 }
+
 
 menu a i {
     background: linear-gradient(135deg, #03A9F4, #0288D1);
@@ -215,6 +228,7 @@ menu a i {
     transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
+
 menu a:hover {
     transform: translateX(-10px);
     background: linear-gradient(135deg, rgba(3, 169, 244, 0.9), rgba(2, 136, 209, 0.9));
@@ -222,10 +236,12 @@ menu a:hover {
     border-color: rgba(255, 255, 255, 0.3);
 }
 
+
 menu a:hover i {
     transform: scale(1.2) rotate(5deg);
     box-shadow: 0 6px 15px rgba(255, 255, 255, 0.4);
 }
+
 
 menu a.disabled {
     opacity: 0.4;
@@ -233,7 +249,7 @@ menu a.disabled {
     pointer-events: none;
 }
 
-/* Contenido */
+
 .contenido {
     background: rgba(255, 255, 255, 0.98);
     backdrop-filter: blur(10px);
